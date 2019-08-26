@@ -18,16 +18,17 @@ Search = React.creatClass({
         this.props.onSearch(this.state.searchingText);
       }
     },
-  render: function() {
-    var styles = {
-      fontSize: '1.5em',
-      width: '90%',
-      maxWidth: '350px'
-    };
+    render: function() {
+      var styles = {
+        fontSize: '1.5em',
+        width: '90%',
+        maxWidth: '350px'
+      };
 
     return <input
               type='text'
               onChange={this.handleChange}
+              onKeyUp={this.handleKeyUp}
               placeholder='Wpisz poszukiwany gif'
               style={styles}
               value={this.state.searchTerm}
